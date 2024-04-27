@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot- TSE</title>
     <link rel="stylesheet" type="text/css" href="styles.css/style2.css">
-    <script type="text/javascript" src="./script/buscaDeputados.js"></script>
-    <script type="text/javascript" src="./script/propostas.js"></script>
-
+    <style>
+        /* Estilos CSS aqui */
+    </style>
 </head>
 <body>
     <div id="container-chatbot">
@@ -18,57 +18,29 @@
             <div id="chatbot-text">
                 <h1 id="loading-text"></h1>
             </div>
-            <div id="denúncia">
-                <label for="nomeInput">Deseja fazer uma denúncia?</label>
-                <a href="https://www.tse.jus.br/comunicacao/noticias/2022/Agosto/saiba-como-denunciar-irregularidades-eleitorais-usando-o-app-pardal" target="_blank"> <button id="buscarButton" >DENUNCIE!</button></a>
-                
-            </div>
         </header>
         <main>
-            <div id="ficha">
-                <input type="text" id="campo" placeholder="Digite o nome do candidato">
-                 <button onclick="buscarCandidato()">Buscar</button>
-                <div id="resultadoDiv"></div>
+            <div id="">
+                
             </div>
-            
-            <script>
-                  const baseUrlTodosOsCandidatos = 'https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome';
-        const resultadoDiv = document.querySelector('#resultadoDiv');
-
-        function buscarCandidato() {
-            const nome = document.querySelector('#campo').value;
-            fetch(baseUrlTodosOsCandidatos)
-                .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                    throw new Error('Erro ao obter os dados da API');
-                })
-                .then(data => {
-                    const candidato = data.dados.find(candidato => candidato.nome === nome)
-                    if (candidato) {
-                        resultadoDiv.innerHTML = `
-                            <p>Nome: ${candidato.nome}</p>
-                            <p>Sigla do Partido: ${candidato.siglaPartido}</p>
-                            <p>Sigla do Estado: ${candidato.siglaUf}</p>
-                            <p>Email: ${candidato.email}</p>
-                        `;
-                    } else {
-                        resultadoDiv.innerHTML = `<p>${nome} não encontrado(a)! Verifique se você digitou o nome completo e corretamente</p>`;
-                    }
-                })
-                .catch(error => {
-                    resultadoDiv.innerHTML = `<p>Erro: ${error.message}</p>`;
-                });
-        }
-            </script>
-
-            <div id="propostas">
-                <label for="nomeInput">Pesquise pelas propostas do candidato</label>
+            <div id ="ficha">
+                <label for="nomeInput">Ficha completa do candidato:</label>
                 <input type="text" id="nomeInput" placeholder="Nome do candidato">
                 <button id="buscarButton">Buscar</button>
             </div>
+
+            <div id="propostas">
+                <label for="nomeInput">Pesquise pelas propostas do candidato:</label>
+                <input type="text" id="nomeInput" placeholder="Nome do candidato">
+                <button id="buscarButton">Buscar</button>
+            </div>
+            <div id="retorno">
+                
+            </div>
         </main>
+        <div id="img-tse">
+            <img src="images/icon.png" id="img-tse-img">
+        </div>
     </div>
 
     <script>
@@ -81,7 +53,7 @@
                 if (index === text.length) {
                     clearInterval(interval);
                 }
-            }, 100); // Intervalo de 100ms entre cada letra
+            }, 60); // Intervalo de 60ms entre cada letra
         });
     </script>
 </body>

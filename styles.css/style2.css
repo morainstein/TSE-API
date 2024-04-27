@@ -1,0 +1,85 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container-chatbot {
+    width: 750px;
+    height: 550px;
+    background-color: rgb(120, 197, 134);
+    border-radius: 20px;
+}
+
+header {
+    background-color: rgb(25, 25, 156);
+    padding: 10px 0px;
+    display: flex;
+    border-radius:20px 20px 0px 0px;
+}
+
+main {
+    margin: 30px 40px;
+    background-color: rgb(254, 254, 43);
+    padding: 20px;
+    border-radius: 20px;
+    animation: fade 5.5s alternate;
+}
+
+#chatbot-image img {
+    width: 80px;
+    height: 80px;
+}
+
+#chatbot-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+input {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(109, 109, 239);
+}
+
+#img-tse img {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#retorno {
+    background-color: rgb(254, 254, 43);
+}
