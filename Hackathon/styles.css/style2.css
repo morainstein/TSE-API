@@ -1,0 +1,37 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container-chatbot {
+    width: 750px;
+    height: 550px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+header {
+    background-color: rgb(109, 109, 239);
+    padding: 10px 0px;
+    display: flex;
+}
+
+#chatbot-image img {
+    width: 80px;
+    height: 80px;
+}
+
+#chatbot-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
