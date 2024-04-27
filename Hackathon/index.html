@@ -33,6 +33,11 @@
         document.getElementById('prosseguir-button').addEventListener('click', function() {
             var nome = document.getElementById('name-input').value;
         });
+        document.getElementById('prosseguir-button').addEventListener('click', function() {
+    var nome = document.getElementById('name-input').value;
+    window.location.href = 'bot-page.html?nome=' + encodeURIComponent(nome);
+});
+
     </script>
 </body>
 </html>
