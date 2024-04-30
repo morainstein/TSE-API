@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot- TSE</title>
     <link rel="stylesheet" type="text/css" href="styles.css/style2.css">
-    <style>
-        /* Estilos CSS aqui */
-    </style>
 </head>
 <body>
     <div id="container-chatbot">
@@ -20,19 +17,10 @@
             </div>
         </header>
         <main>
-            <div id="">
-                
-            </div>
-            <div id ="ficha">
+            <div id="ficha">
                 <label for="nomeInput">Ficha completa do candidato:</label>
                 <input type="text" id="nomeInput" placeholder="Nome do candidato">
-                <button id="buscarButton">Buscar</button>
-            </div>
-
-            <div id="propostas">
-                <label for="nomeInput">Pesquise pelas propostas do candidato:</label>
-                <input type="text" id="nomeInput" placeholder="Nome do candidato">
-                <button id="buscarButton">Buscar</button>
+                <button id="buscarFichaButton">Buscar</button>
             </div>
             <div id="retorno">
                 
@@ -43,6 +31,7 @@
         </div>
     </div>
 
+    <script src="buscaDeputados.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var text = 'Olá, você está conversando com Naru';
